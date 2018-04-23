@@ -1,0 +1,30 @@
+.grid
+    align-items: stretch
+    @extend .flex
+    flex-flow: row wrap 
+    +mq('640px',max)
+        flex-flow: column wrap
+    justify-content: space-between
+    margin-bottom: -60px
+    >*
+        flex: 0 0 auto
+        padding-bottom: 60px
+        img 
+            display: block
+            max-width: 100%
+            +mq('640px',max)
+                margin: 0 auto 
+        &.-md
+            &:nth-child(2n+1)
+                padding-right: 25px
+                +mq('640px',max)
+                    padding-right: 0
+            &:nth-child(2n+2)
+                padding-left: 25px
+                +mq('640px',max)
+                    padding-left: 0
+            width: 50%
+            +mq('640px',max)
+                width: 100%
+    p 
+        text-align: justify

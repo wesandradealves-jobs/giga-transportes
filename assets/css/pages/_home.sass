@@ -1,0 +1,232 @@
+#sobre-nos
+    >.container
+        padding-top: 20px
+        .sobre-nos
+            @extend .grid
+            margin-top: 60px
+            >*
+                @extend .-md
+                @extend .grid
+                >*
+                    @extend .-md
+                    &:first-of-type
+                        flex: 0 0 auto
+                        width: 108px
+                        +mq('640px',max)
+                            width: 100%
+                        &+*
+                            flex: 1
+            img 
+                width: 108px
+#rastreamento-de-cargas
+    background-color: $duck-egg-blue
+    color: $gunmetal
+    position: relative
+    z-index: 2
+    h2 
+        text-align: center
+    .rastreamento-de-cargas
+        align-items: flex-end
+        @extend .grid 
+        img 
+            margin-bottom: -115px
+            max-width: initial
+            +mq('768px',max)
+                left: -29vw
+                margin-left: auto 
+                margin-right: auto
+                margin-bottom: -68vw
+                width: 155vw
+        >*
+            @extend .-md
+            +mq('768px',max)
+                width: 100%
+#atendimento 
+    background-color: $cobalt
+    color: white
+    position: relative
+    z-index: 1
+    >.container
+        max-width: 780px
+        padding-top: 80px    
+        +mq('768px',max)
+            padding-top: 68vw
+            padding-bottom: 196px 
+            h2 
+                text-align: center
+        .map
+            background: url(assets/imgs/group-11@3x.png) center center / contain no-repeat transparent 
+            display: block 
+            padding: 0 0 50%
+            width: 100%
+            +mq('768px',max)
+                background-image: url(assets/imgs/group-11-mobile@3x.png)
+                padding: 0 0 80%
+        &::before
+            content: url(assets/imgs/group-5-2.png)
+            display: block
+            left: -70px 
+            position: absolute 
+            top: 0
+            +mq('768px',max)
+                bottom: -4px
+                left: 50%
+                margin-left: -245px
+                top: initial
+#gestao-a-vista
+    color: $greyish-brown
+    h2
+        border-bottom: 2px lighten(lightgray,10%) solid
+        margin-bottom: 50px
+        padding-bottom: 20px
+        text-align: center
+        text-transform: initial
+        +mq('768px',max)
+            border-bottom: 0
+            margin-bottom: 30px
+            padding-bottom: 0
+    .gestao-a-vista
+        @extend .grid
+        >*
+            @extend .-md
+            &:first-of-type
+                flex: 0 0 auto
+                width: 386px
+                +mq('768px',max)
+                    width: 100%
+                &+*
+                    flex: 1      
+#nossos-clientes
+    color: $greyish-brown
+    h2
+        text-align: center
+    .nossos-clientes
+        @extend .flex
+        flex-flow: row wrap 
+        justify-content: space-around
+        +mq('1024px',min)
+            &:hover
+                >* 
+                    filter: blur(3px)
+                    opacity: .3
+        >*
+            +mq('1024px',min)
+                &:hover
+                    filter: blur(0px)
+                    opacity: 1
+            flex: 0 0 auto
+            +transition(500ms)
+            width: 20%
+            +mq('768px',max)
+                width: 33.333%
+#nossos-servicos
+    background-color: $duck-egg-blue
+    color: $greyish-brown
+    h2
+        border-bottom: 2px lighten(lightgray,10%) solid
+        margin-bottom: 50px
+        padding-bottom: 20px
+        text-align: center
+        +mq('768px',max)
+            border-bottom: 0
+            margin-bottom: 30px
+            padding-bottom: 0
+    .nossos-servicos
+        align-items: stretch
+        @extend .flex
+        flex-flow: row wrap 
+        justify-content: space-between
+        margin: 40px auto -40px
+        >* 
+            flex: 0 0 auto 
+            padding-bottom: 40px
+            width: 33.333%
+            +mq('768px',max)
+                width: 50%
+            &:nth-child(3n+1),
+            &:nth-child(3n+2)
+                padding-right: 20px
+                +mq('768px',max)
+                    padding-right: 0
+            +mq('768px',max)
+                &:nth-child(3n+1),
+                &:nth-child(3n+2)
+                    padding-right: 0            
+                &:nth-child(2n+1)
+                    padding-right: 20px
+            +mq('640px',max)
+                width: 100%
+                &:nth-child(3n+1),
+                &:nth-child(3n+2),
+                &:nth-child(2n+1)
+                    padding-right: 0                    
+            img 
+                display: block 
+                margin: 0 auto 30px
+    h2+p,
+    .nossos-servicos
+        padding-left: 47px 
+        padding-right: 47px
+        +mq('1024px',max)
+            padding-left: 15px
+            padding-right: 15px
+#contato
+    background-color: $cobalt
+    color: white 
+    h2
+        border-bottom: 2px lighten($cobalt,10%) solid
+        margin-bottom: 50px
+        padding-bottom: 20px
+        text-align: center
+        +mq('768px',max)
+            border-bottom: 0
+            margin-bottom: 30px
+            padding-bottom: 0
+    .contato
+        @extend .flex
+        flex-flow: row wrap 
+        justify-content: space-between
+        +mq('768px',max)
+            flex-flow: column wrap 
+            margin-top: 60px
+            text-align: center
+        >*
+            flex: 1
+            +mq('768px',max)
+                &:not(:last-child)
+                    margin-bottom: 46px
+            img 
+                display: inline-block 
+                vertical-align: middle 
+                width: 36px
+                +mq('768px',max)
+                    display: block 
+                    margin: 0 auto 20px
+                &+p 
+                    display: inline-block 
+                    +rem('font-size',14px)
+                    vertical-align: middle 
+                    margin-left: -40px
+                    padding-left: 60px
+                    width: 100%
+                    +mq('768px',max)
+                        margin: 0 auto
+                        max-width: 174px
+                        padding-left: 0 
+                        text-align: center
+    #googleMap
+        border-top: 2px $yellow solid
+        border-bottom: 2px $yellow solid
+        display: block 
+        height: 0
+        overflow: hidden
+        padding: 0 0 25%
+        +mq('1440px',max)
+            padding: 0 0 50%
+        +mq('768px',max)
+            height: 100vh
+            padding: 0 
+        position: relative
+        width: 100%
+        .map-label
+            color: black

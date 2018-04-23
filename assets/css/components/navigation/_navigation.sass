@@ -1,0 +1,63 @@
+.navigation
+    &-mobile 
+        align-items: center
+        background-color: transparentize($cobalt,.3)
+        display: none
+        &.-on
+            @extend .flex
+        justify-content: center 
+        height: 100%
+        left: 0
+        position: fixed 
+        top: 0
+        width: 100vw
+        z-index: 10
+        >ul 
+            >li 
+                color: white
+                display: block 
+                +rem((font-size: 22px, line-height: 16px))
+                &:not(:last-child)
+                    margin-bottom: 22px
+                position: relative
+                text-align: center
+                @for $i from 1 through 5
+                    &:nth-child(#{$i})
+                        @include animation(left-to-right,(10s*$i)/50)                
+                .social
+                    border: 1px white solid
+                    display: block
+                    +rem((height: 40px, width: 40px, line-height: 40px))
+                    margin: 0 auto
+    >ul
+        +mq('1024px',min)
+            border-bottom: 1px white solid
+        >li 
+            color: white
+            display: inline-block
+            +rem(font-size, 16px) 
+            &:hover
+                color: $yellow
+                .social
+                    background-color: $yellow
+                    -webkit-animation: anim-moema-1 500ms forwards
+                    animation: anim-moema-1 500ms forwards
+            &:not(:last-child)
+                margin-right: 35px
+            padding-bottom: 23px
+            vertical-align: middle
+            &:last-child
+                +mq('1024px',min)
+                    display: none
+            +mq('1024px',max)
+                &:not(:last-child)
+                    display: none
+                padding-top: 0
+                padding-bottom: 0
+            .social
+                background-color: white
+                color: $cobalt
+            +mq('768px',min)
+                @for $i from 1 through 5
+                    &:nth-child(#{$i})
+                        @include animation(top-opacity,(30s*$i)/50)

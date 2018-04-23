@@ -1,0 +1,18 @@
+.header
+    margin-bottom: -120px
+    position: relative
+    z-index: 2
+    >.container
+        align-items: flex-start
+        +mq('1024px',max)
+            align-items: center
+        @extend .flex
+        justify-content: space-between
+        padding-top: 23px
+    .logo
+        +mq('768px',min)
+            +animation(left-to-right,1000ms)
+        +mq('560px',max)
+            >a
+                >img 
+                    height: 73px        

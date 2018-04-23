@@ -1,0 +1,126 @@
+body, html
+    +animation(opacity,2000ms)
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+    font-family: 'Roboto', sans-serif
+    min-width: 320px
+    .container
+        min-width: inherit
+    button,input,textarea,select 
+        border: 0 
+        font-family: inherit
+        margin: 0 0 
+        padding: 0 0
+    * 
+        &::after,&::before 
+            -webkit-box-sizing: inherit
+            -moz-box-sizing: inherit
+            box-sizing: inherit
+        font-weight: 400 
+        -webkit-box-sizing: inherit
+        -moz-box-sizing: inherit
+        box-sizing: inherit
+        line-height: initial
+
+textarea[placeholder] 
+    text-overflow: ellipsis
+    color: #eaeaea
+    opacity: 1
+    font-weight: 300
+ 
+
+input[placeholder] 
+    text-overflow: ellipsis
+    color: #eaeaea
+    opacity: 1 
+    font-weight: 300
+
+
+::-moz-placeholder 
+    text-overflow: ellipsis 
+    color: #eaeaea
+    opacity: 1
+    font-weight: 300
+
+
+input::-webkit-input-placeholder 
+    color: #eaeaea
+    opacity: 1
+    font-weight: 300
+
+
+textarea::-webkit-input-placeholder 
+    color: #eaeaea
+    opacity: 1
+    font-weight: 300
+
+
+input:-ms-input-placeholder 
+    color: #eaeaea
+    opacity: 1
+    font-weight: 300
+
+
+textarea:-ms-input-placeholder 
+    color: #eaeaea
+    opacity: 1
+    font-weight: 300
+
+
+.flex  
+    display: -webkit-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex    
+
+
+[class*="brandico-"]::before 
+    font-family: 'brandico', sans-serif
+
+.container
+    display: block
+    max-width: 960px
+    margin: 0 auto
+    padding-left: 15px
+    padding-right: 15px
+
+.social
+    +border(999px)
+    display: inline-block 
+    +rem((height: 25px,line-height: 25px,width: 25px))
+    text-align: center
+
+sup 
+    display: inline-block
+    vertical-align: top 
+    top: 0
+
+h2
+    display: block  
+    +rem('font-size',35px)
+    font-weight: 300
+    font-style: italic
+    line-height: 38px
+    text-transform: uppercase 
+    +mq('640px',max)
+        text-align: center 
+
+i 
+    font-style: italic
+
+p 
+    font-weight: 300
+    +rem('font-size',16px)
+    +rem('line-height',22px)
+    +mq('640px',max)
+        text-align: justify
+    b,strong 
+        font-weight: bold
+
+section 
+    h2 
+        margin-bottom: 30px
+    .container
+        padding-top: 60px
+        padding-bottom: 60px

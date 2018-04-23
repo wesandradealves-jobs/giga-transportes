@@ -1,0 +1,105 @@
+.webdoor
+    +background(center top, 1440px, no-repeat, transparent)
+    display: block
+    max-height: 1222px
+    position: relative
+    padding-top: 120px
+    width: 100%
+    z-index: 1
+    >.container
+        >.cars
+            align-items: center
+            @extend .flex 
+            position: relative
+            justify-content: center
+            margin-top: 10px
+            +mq('560px',max)
+                margin-top: -70px
+            >.car
+                @for $i from 1 through 3
+                    &.-car#{$i}
+                        +background(center center, contain, no-repeat, transparent, 'assets/imgs/car#{$i}.png')
+                        @include animation(opacity,(60s*$i)/50)
+                &.-car1
+                    +mq('768px',max)
+                        margin-left: -55px                    
+                    height: 324px
+                    width: 411px
+                    z-index: 3
+                &.-car2
+                    margin: 0 -200px
+                    height: 399px
+                    width: 671px
+                    z-index: 2
+                    +mq('768px',max)
+                        margin: 0 -95px
+                &.-car3
+                    left: 30px
+                    +mq('768px',max)
+                        left: 0
+                    top: 10px
+                    height: 147px
+                    width: 329px
+                    z-index: 1
+                    +mq('768px',min)
+                        +animation(ltr-car,1500ms)    
+        >.title
+            +mq('1024px',min)
+                left: 60px
+            max-width: 400px
+            +mq('560px',max)
+                left: -10px
+                max-width: 290px
+                margin-top: 15px
+                margin-bottom: 25px
+            margin-left: auto 
+            margin-right: auto                       
+            >span 
+                color: white
+                display: block
+                font-style: italic
+                text-transform: uppercase
+                +rem(letter-spacing, -1.5px)
+                +mq('768px',min)
+                    +animation(rtl-webdoor-title,2000ms) 
+                text-align: right 
+                &:nth-child(1),
+                &:nth-child(3)
+                    text-align: right
+                &:nth-child(2)
+                    text-align: left     
+                &:nth-child(3)
+                    +rem(right,60px)     
+                @for $i from 1 through 2
+                    &:nth-child(#{$i})
+                        +rem(font-size, 55.2px)
+                        +mq('560px',max)
+                            +rem(font-size, 40.2px)
+                &:nth-child(1)
+                    +mq('768px',min)
+                        +animation(right-to-left,1000ms)                    
+                &:nth-child(3)
+                    +rem(font-size, 35.2px)
+                    +mq('560px',max)
+                        +rem(font-size, 25.2px)
+                    font-weight: 300
+                &:nth-child(2)
+                    font-weight: bold
+                    +rem((margin-top: -25px,margin-bottom: -20px))
+                    +mq('560px',max)
+                        +rem((margin-top: -18px,margin-bottom: -12px))  
+                    +mq('768px',min)
+                        +animation(left-to-right,1500ms)
+                &:nth-child(2),
+                &:nth-child(3)
+                    color: $yellow
+                >sup
+                    +rem((font-size: 19.2px,line-height: 19.2px))
+                    +mq('560px',max)
+                        +rem((font-size: 14.2px,line-height: 14.2px))
+                    font-style: initial
+                    letter-spacing: initial
+                    +rem((margin-right: -10px, top: 5px))
+                    +mq('560px',max)
+                        +rem((margin-right: -5px, top: 5px))
+                    text-transform: initial
